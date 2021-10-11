@@ -63,7 +63,7 @@ app.put('/todo/:id', (req, res) => {
 
   if (tag) {
     tag.complete = !tag.complete
-    return res.status(200).json({ status: "succes", task: tag})
+    return res.status(200).json({ status: "success", task: tag})
   }else{
     return res.status(404).json({ status: "failed", message: "Id is not found" })
   }
@@ -77,7 +77,7 @@ app.delete('/todo/:id',(req,resp)=>{
   if(foundIndex>-1)
   {
    tasks.splice(foundIndex,1)
-  return resp.json({status:"succes",tasks})
+  return resp.json({status:"success",tasks})
   }
   else
   {
